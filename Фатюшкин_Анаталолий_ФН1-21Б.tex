@@ -1,0 +1,303 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{graphics}
+\usepackage{pbox}
+\usepackage[x11names]{xcolor}
+\definecolor{brightmaroon}{rgb}{0.76, 0.13, 0.28}
+\definecolor{royalazure}{rgb}{0.0, 0.22, 0.66}
+\usepackage[colorlinks=true,linkcolor=royalazure]{hyperref}
+\usepackage{tikz, tkz-fct, pgfplots}
+\usetikzlibrary{arrows}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	top=20mm
+} 
+\usepackage[labelsep=period]{caption}
+
+% ----------------- Commands ----------------- 
+\newcommand{\eps}{\varepsilon}
+\newcommand\tline[2]{$\underset{\text{#1}}{\text{\underline{\hspace{#2}}}}$}
+
+% ----------------- Set graphics path ----------------- 
+\graphicspath{{img/}}
+\begin{document}
+\pagestyle{empty}
+\centerline{\large Министерство науки и высшего образования}	
+\centerline{\large Федеральное государственное бюджетное образовательное}
+\centerline{\large учреждение высшего образования}
+\centerline{\large ``Московский государственный технический университет}
+\centerline{\large имени Н.Э. Баумана}
+\centerline{\large (национальный исследовательский университет)''}
+\centerline{\large (МГТУ им. Н.Э. Баумана)}
+\hrule
+\vspace{0.5cm}
+\begin{figure}[h]
+\center
+\includegraphics[height=0.35\linewidth]{bmstu-logo-small.png}
+\end{figure}
+\begin{center}
+	\large	
+	\begin{tabular}{c}
+		Факультет ``Фундаментальные науки'' \\
+		Кафедра ``Высшая математика''		
+	\end{tabular}
+\end{center}
+\vspace{0.5cm}
+\begin{center}
+	\LARGE \bf	
+	\begin{tabular}{c}
+		\textsc{Отчёт} \\
+		по учебной практике \\
+		за 1 семестр 2020---2021 гг.
+	\end{tabular}
+\end{center}
+\vspace{0.5cm}
+\begin{center}
+	\large
+	\begin{tabular}{p{5.3cm}ll}
+		\pbox{5.45cm}{
+			Руководитель практики,\\
+			ст. преп. кафедры ФН1} 	& \tline{\it(подпись)}{5cm} & Кравченко О.В. \\[0.5cm]
+		студент группы ФН1--11 		& \tline{\it(подпись)}{5cm} & Ф.И.О.
+	\end{tabular}
+\end{center}
+\vfill
+\begin{center}
+	\large	
+	\begin{tabular}{c}
+		Москва, 
+		2020 г.
+	\end{tabular}
+\end{center}
+
+\newpage	
+\tableofcontents
+
+\newpage
+\section{Цели и задачи практики}	
+\subsection{Цели}
+--- развитие компетенций, способствующих успешному освоению материала бакалавриата и необходимых в будущей профессиональной деятельности.
+
+\subsection{Задачи}
+\begin{enumerate}
+\item Знакомство с программными средствами, необходимыми в будущей профессиональной деятельности.
+\item Развитие умения поиска необходимой информации в специальной литературе и других источниках.
+\item Развитие навыков составления отчётов и презентации результатов.
+\end{enumerate}
+
+\subsection{Индивидуальное задание}	
+\begin{enumerate}
+\item Изучить способы отображения математической информации в системе вёртски \LaTeX.
+\item Изучить возможности  системы контроля версий \textsf{Git}.
+\item Научиться верстать математические тексты, содержащие формулы и графики в системе \LaTeX.
+Для этого, выполнить установку свободно распространяемого дистрибутива \textsf{TeXLive} и оболочки \textsf{TeXStudio}.
+\item Оформить в системе \LaTeX типовые расчёты по курсе математического анализа согласно своему варианту.
+\item Создать аккаунт на онлайн ресурсе \textsf{GitHub} и загрузить исходные \textsf{tex}--файлы 
+и результат компиляции в формате \textsf{pdf}.
+\end{enumerate} 
+
+\newpage
+\section{Отчёт}
+Актуальность темы продиктована необходимостью владеть системой вёрстки \LaTeX и средой вёрстки \textsf{TeXStudio} для
+отображения текста, формул и графиков. Полученные в ходе практики навыки могут быть применены при написании
+курсовых проектов и дипломной работы, а также в дальнейшей профессиональной деятельности.
+
+Ситема вёрстки \LaTeX содержит большое количество инструментов (пакетов), упрощающих отображение информации в различных 
+сферах инженерной и научной деятельности. 
+
+\newpage
+\section{Индивидуальное задание}
+\subsection{Пределы и непрерывность.}
+% ---------------------------- Problem 1----------------------------------
+\subsubsection*{\center Задача № 1.}
+{\bf Условие.~}
+Дана последовательность $a_{n}=\dfrac{5n+15}{6-n}$ и число $c=-5$.
+Доказать, что $$\lim\limits_{n\rightarrow\infty}a_n=c,$$
+а именно, для каждого $\eps>0$ найти наименьшее натуральное число $N{=}N(\eps)$ такое, что $|a_{n}-c|<\eps$ для всех $n>N(\eps)$.
+Заполнить таблицу:
+\begin{center}
+\begin{tabular}{ | p{25pt} | c | c | c | c |}
+\hline
+$\varepsilon$& $0{,}1$ & $0{,}01$ & $0{,}001$ \\
+\hline
+$N(\varepsilon)$ &   &   &\\
+\hline
+\end{tabular}    
+\end{center}
+{\bf Решение.~}
+Рассмотрим неравенство $a_n-c<\eps,\,\forall\eps>0$, учитывая выражение для $a_n$ и значение $c$ из условия варианта,
+получим:
+$$
+\biggl|\dfrac{5n+15}{6-n}+5\biggr| < \eps ;
+$$
+$$
+\biggl|\frac{5n+15+30-5n}{6-n}\biggr| < \eps ;
+$$
+$$
+\biggl|\frac{45}{6-n}\biggr| < \eps .
+$$
+Заметим, что $n\in\mathbb{N}$ и $\eps >0$ поэтому, можно опустить знак модуля:
+$$
+\begin{array}{c}
+\dfrac{45}{6-n} < \eps ;                         \\[8pt]
+n > \dfrac{45}{\eps} + 6 .                       \\[8pt]
+\end{array}
+$$
+\center Заполним таблицу:
+\begin{center}
+\begin{tabular}{ | p{25pt} | c | c | c | c |}
+\hline
+$\varepsilon$& $0{,}1$ & $0{,}01$ & $0{,}001$ \\
+\hline
+$N(\varepsilon)$& $456$ & $4506$ & $45006$\\
+\hline
+\end{tabular}
+\end{center} 
+% ---------------------------- Problem 2----------------------------------
+\subsubsection*{\center Задача № 2.}
+{\bf Условие.~}
+Вычислить пределы функций
+$$
+\begin{array}{cc}
+\text{\bf(а):} & \lim\limits_{x\rightarrow2}\dfrac{x^3-5x+2}{x^2-12x+20}; \\[10pt]
+\text{\bf(б):} & \lim\limits_{x\rightarrow\infty}\dfrac{x^3\sqrt{\,x^8+9x^5}+x^4}{3x^4-2x^3}; \\[10pt]
+\text{\bf(в):} & \lim\limits_{x\rightarrow\infty}\dfrac{\sqrt[4]{\,x}-1}{\sqrt[3]{\,x}-1}; \\[10pt]
+\text{\bf(г):} & \lim\limits_{x\rightarrow3/2}\biggl(1-\dfrac{2x}{3}\biggr)^{\tan{\frac{\pi x}{3}}}; \\[10pt]
+\text{\bf(д):} & \lim\limits_{x\rightarrow0}\biggl(\dfrac{\sin{2x}}{\lg(x+1)}\biggr)^{\frac{2}{x+\cos{x}}}; \\[10pt]
+\text{\bf(е):} & \lim\limits_{x\rightarrow0}\dfrac{1-\cos{5x}}{e^{x^2}-1}.
+\end{array}
+$$
+% ---------------------------- Problem 2а --------------------------------
+{\bf Решение:~}
+\text{\bf(а):}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow2}\dfrac{x^3-5x+2}{x^2-12x+20} = 
+\lim\limits_{x\rightarrow2}\dfrac{(x-2)(x^2+2x-1)}{(x-2)(x-10)} = 
+\lim\limits_{x\rightarrow2}\dfrac{x^2+2x-1}{x-10} = 
+-\dfrac{7}{8}.
+\end{array}
+$$
+% ---------------------------- Problem 2б --------------------------------
+\text{\bf(б):}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow\infty}\dfrac{x^3\sqrt{\,x^8+9x^5}+x^4}{3x^4-2x^3} =
+\lim\limits_{x\rightarrow\infty}\dfrac{\frac{1}{x}+\sqrt{\,1+\frac{9}{x^3}}+1)}{3-\frac{2}{x}} = \dfrac{2}{3}.
+\end{array}
+$$
+% ---------------------------- Problem 2в --------------------------------
+\text{\bf(в):}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow\infty}\dfrac{\sqrt[4]{\,x}-1}{\sqrt[3]{\,x}-1} = 
+\biggl|
+\begin{array}{l}
+x=y^{12}\\ y\rightarrow\infty
+\end{array}
+\biggr|
+= \lim\limits_{y\rightarrow\infty}\dfrac{\sqrt[4]{\,y^{12}-1}}{\sqrt[3]{\,y^{12}-1}} = 
+\lim\limits_{y\rightarrow\infty}\dfrac{y^{12}-1}{y^{12}-1} = \lim\limits_{y\rightarrow\infty}\dfrac{\frac{y^3}{y^4}-\frac{1}{y^4}}{\frac{y^4}{y^4}-\frac{1}{y}} = 0.
+\end{array}
+$$
+% ---------------------------- Problem 2г --------------------------------
+\text{\bf(г):}	
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow3/2}\biggl(1-\dfrac{2x}{3}\biggr)^{\tan{\frac{\pi x}{3}}} = 
+\biggl|
+\begin{array}{l}
+t = x-\frac{3}{2} \\ t\rightarrow0
+\end{array}
+\biggr| =
+\lim\limits_{t\rightarrow0}\biggl(1-\dfrac{2(t-\frac{3}{2})}{3}\biggr)^{\tan{\frac{\pi (t+\frac{3}{2})}{3}}} =
+\lim\limits_{t\rightarrow0}\biggl(\biggl(1-\dfrac{2t}{3}\biggr)^{\frac{3}{2t}}\biggr)^{\frac{2t\cos{\frac{\pi t}{3}}}{3(-\sin{\frac{\pi t}{3}})}} = \\ 
+\lim\limits_{t\rightarrow0}e^{\frac{2t\cos{\frac{\pi t}{3}}\frac{\pi t}{3}\frac{3}{\pi t}}{-3\sin{\frac{\pi t}{3}}}} = \lim\limits_{t\rightarrow0}e^{-\frac{2}{\pi}} = e^{-\frac{2}{\pi}}.
+\end{array}
+$$
+% ---------------------------- Problem 2д --------------------------------
+\text{\bf(д):}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow0}\biggl(\dfrac{\sin{2x}}{\lg(x+1)}\biggr)^{\frac{2}{x+\cos{x}}} = 
+\lim\limits_{x\rightarrow0}\biggl(\dfrac{\sin{2x}}{\frac{x}{\ln{10}}}\biggr)^{\frac{2}{x+\cos{x}}} =
+\lim\limits_{x\rightarrow0}\biggl(\dfrac{\sin{2x}\cdot2\ln{10}}{2-x}\biggr)^{\frac{2}{x+\cos{x}}} = \\
+\lim\limits_{x\rightarrow0}(2\ln{10})^{\frac{2}{x+\cos{x}}} = 4\cdot(\ln{10})^2.
+\end{array}
+$$
+% ---------------------------- Problem 2е --------------------------------
+\text{\bf(е):}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow0}\dfrac{1-\cos{5x}}{e^{x^2}-1} = \lim\limits_{x\rightarrow0}\dfrac{\frac{(5x)^2}{2}}{x^2} = \dfrac{25}{2}
+\end{array}
+$$
+\newpage
+% ---------------------------- Problem 3----------------------------------
+\subsubsection*{\center Задача № 3.}
+{\bf Условие.~}\\
+\text{\bf(а):} Показать, что данные функции
+$f(x)$ и $g(x)$ являются бесконечно малыми или бесконечно большими
+при указанном стремлении аргумента. \\
+\text{\bf(б):} Для каждой функции $f(x)$ и $g(x)$ записать главную часть
+(эквивалентную ей функцию)  вида $C(x-x_0)^{\alpha}$ при $x\rightarrow x_0$ или $Cx^{\alpha}$
+при $x\rightarrow\infty$, указать их порядки малости (роста). \\
+\text{\bf(в):} Сравнить функции $f(x)$ и $g(x)$ при указанном стремлении.
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		№ варианта & функции $f(x)$ и $g(x)$ & стремление \\[6pt]
+		%\hline
+		18 & $f(x) = \sin{\frac{1}{\sqrt{\,x+\sqrt{\,x}+1}}},~g(x)=\sqrt{\,x^2+\sqrt{\,x}}-x$ & $x\rightarrow+\infty$ \\
+		\hline
+	\end{tabular}
+\end{center}
+{\bf Решение.~}\\
+\text{\bf(а):}~Покажем, что $f(x)$ и $g(x)$ бесконечно малые функции:
+$$
+\begin{array}{cc}
+\lim\limits_{x\rightarrow+\infty}f(x) = \lim\limits_{x\rightarrow+\infty}\biggl(\sin{\frac{1}{\sqrt{\,x+\sqrt{\,x}+1}}}\biggr) \thicksim \lim\limits_{x\rightarrow+\infty}\biggl(\frac{1}{\sqrt{\,x+\sqrt{\,x}+1}}\biggr) = \lim\limits_{x\rightarrow+\infty}\biggl(\frac{\frac{1}{\sqrt{x}}}{\sqrt{\,\frac{x}{x}+\frac{\sqrt{x}}{x}}+\frac{1}{\sqrt{x}}}\biggr) = 0.
+\\
+\lim\limits_{x\rightarrow+\infty}g(x) = \lim\limits_{x\rightarrow+\infty}\biggl(\sqrt{\,x^2+\sqrt{\,x}}-x\biggr) = 
+\lim\limits_{x\rightarrow+\infty}\biggl(\frac{x^2+\sqrt{\,x}-x^2}{\sqrt{\,x^2+\sqrt{\,x}}+x}\biggr) = 
+\lim\limits_{x\rightarrow+\infty}\biggl(\frac{\sqrt{\,x}}{\sqrt{\,\frac{x^2}{x^2}+\frac{\sqrt{\,x}}{x^2}}+\frac{x}{x}}\biggr) = 0.
+\end{array}
+$$
+\text{\bf(б):}~Выделим главные части функций $f(x)$ и $g(x)$:
+$$ 
+f(x) = \sin{\frac{1}{\sqrt{\,x+\sqrt{\,x}+1}}} \thicksim \frac{1}{\sqrt{\,x}} .
+$$
+\text{\bf}~Тогда при $x\rightarrow+\infty$ главная часть функции будет $1\cdot x^{1/2}$ .
+$$ 
+g(x) = \sqrt{\,x^2+\sqrt{\,x}}-x = \dfrac{x^2+\sqrt{\,x}-x^2}{\sqrt{\,x^2+\sqrt{\,x}}+x} = \dfrac{\sqrt{\,x}}{\sqrt{\,x^2+\sqrt{\,x}}+x} = \dfrac{\frac{\sqrt{\,x}}{x}}{\sqrt{\,\frac{x^2}{x^2}+\frac{\sqrt{\,x}}{x^2}}+\frac{x}{x}} = \\
+= \dfrac{\frac{x}{\sqrt{\,x}}}{\sqrt{\,1+\frac{1}{\sqrt{\,x^3}}}+1} \thicksim \dfrac{\frac{1}{\sqrt{x}}}{2} = \dfrac{1}{2\sqrt{x}} . \\
+$$
+\text{\bf}~Тогда при $x\rightarrow+\infty$ главная часть функции будет $\dfrac{1}{2}\cdot x^{1/2}$ . \\
+\text{\bf}~$k_f = -\frac{1}{2}$ - порядок малости БМФ $f(x)$ относительно $x\rightarrow+\infty$ . \\
+$k_g = -\frac{1}{2}$ - порядок малости БМФ $g(x)$ относительно $x\rightarrow+\infty$ .
+\newpage
+\text{\bf(в):}~Для сравнения функций $f(x)$ и $g(x)$ рассмотрим предел их отношения при указанном стремлении
+$$
+\lim\limits_{x\rightarrow+\infty}\dfrac{f(x)}{g(x)}.
+$$
+Применим эквивалентности, определенные в пункте (б), получим
+$$
+\lim\limits_{x\rightarrow+\infty}\dfrac{f(x)}{g(x)} = 
+\lim\limits_{x\rightarrow+\infty}\dfrac{\sin{\frac{1}{\sqrt{\,x+\sqrt{\,x}+1}}}}{\sqrt{\,x^2+\sqrt{\,x}}-x} =
+\lim\limits_{x\rightarrow+\infty}\dfrac{\frac{1}{\sqrt{\,x+\sqrt{\,x}+1}}}{\sqrt{\,x^2+\sqrt{\,x}}-x} = 2 .
+$$
+Отсюда следует, что $f(x)$ и $g(x)$ -- функции одного порядка.
+%=========================================================================
+\newpage
+\addcontentsline{toc}{section}{Список литературы}
+\begin{thebibliography}{99}
+\bibitem{book01} Львовский С.М. Набор и вёрстка в системе \LaTeX, 2003 c.
+\bibitem{book02} Котельников И.А., Чеботаев П.З. \LaTeX~по-русски.
+\bibitem{book03} Чебарыков М.С Основы работы в системе \LaTeX.
+\end{thebibliography}
+\end{document}
